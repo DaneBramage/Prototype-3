@@ -5,8 +5,8 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
 
-    public float speed = 10;
-    public PlayerController playerControllerScript;
+    private float speed = 15;
+    private PlayerController playerControllerScript;
     private float leftBound = -15;
 
     // Start is called before the first frame update

@@ -6,11 +6,13 @@ public class RepeatBackground : MonoBehaviour
 {
     Vector3 startPos;
     private float repeatWidth;
+
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider>().size.x / 2;
+        // MUST MULTIPLY BY LOCALSCALE SINCE TRANSFORM SCALE HAS BEEN CHANGED (DOESN'T AUTOMATICALLY SCALE BOX COLLIDER CORRESPONDINGLY)
+        repeatWidth = GetComponent<BoxCollider>().size.x * transform.localScale.x / 2; 
     }
 
     // Update is called once per frame
