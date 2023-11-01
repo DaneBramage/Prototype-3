@@ -7337,7 +7337,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Death_01
+  m_Name: Mixamo_Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -7473,7 +7473,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Running_Jump
+  m_Name: Mixamo_Running_Jump
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
