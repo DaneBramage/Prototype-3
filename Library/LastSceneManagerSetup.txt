@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Prototype 3 Goku.unity
+- path: Assets/Scenes/Prototype 3 Robot.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
