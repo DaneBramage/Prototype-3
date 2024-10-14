@@ -239,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b97cc2d583f5b34ea07a62ae671f250, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b97cc2d583f5b34ea07a62ae671f250, type: 3}
       propertyPath: m_LocalPosition.y
@@ -480,6 +480,10 @@ MonoBehaviour:
   gravityModifier: 7
   isOnGround: 1
   gameOver: 0
+  explosionParticle: {fileID: 0}
+  dirtParticle: {fileID: 0}
+  jumpSound: {fileID: 0}
+  crashSound: {fileID: 0}
 --- !u!1 &835818919
 GameObject:
   m_ObjectHideFlags: 0
