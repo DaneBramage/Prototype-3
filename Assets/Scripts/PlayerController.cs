@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier = 2;
 
     public bool isOnGround = true;
-    public bool gameOver = false;
+    public bool gameOver;
     private Animator playerAnim;
     private AudioSource playerAudio;
     public ParticleSystem explosionParticle;
@@ -19,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // private AudioSource cameraAudio; // OPTIONAL - Use to stop music on gameover
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
@@ -29,7 +27,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
         {
@@ -41,12 +39,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("Ground")) {
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
             isOnGround = true;
             dirtParticle.Play();
         }
-        else if (collision.gameObject.CompareTag("Obstacle")) {
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
             gameOver = true;
             Debug.Log("Game Over");
             playerAnim.SetBool("Death_b", true);
